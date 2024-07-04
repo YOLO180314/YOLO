@@ -31,3 +31,94 @@ page {
   text-align: center;
   color: #fff;
 }
+
+.date{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  align-items: center;
+  margin-right: 40rpx;
+}
+
+.Calendar{
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.time{
+  font-size: 24rpx;
+  color: #fff;
+  margin-left: 10rpx;
+  letter-spacing: 2rpx;
+}
+
+.mood{
+  height: 500rpx;
+  width: 100%;
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mood_img{
+  height: 200rpx;
+  width: 200rpx;
+}
+
+.mood_text{
+  height: 150rpx;
+  width: 500rpx;
+  background-color: white;
+  border-radius: 60rpx;
+  box-shadow:5px 5px 10px 2px #aa9bed;
+  margin-top: 30rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 45rpx;
+  font-weight: bold;
+  color: #464545;
+}
+
+.section{
+  width: 100%;
+  height: 520rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: 80rpx;
+  border-top-right-radius: 80rpx;
+  box-shadow:0px -2px 5px 0px #919090;
+}
+
+.content{
+  width: 100%;
+  height: 250rpx;
+  margin-top: 10rpx;
+  margin-bottom: 50rpx;
+}
+
+.content_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 55rpx;
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+}
+
+.but{
+  background-color: #aa9bed;
+  color: whitesmoke;
+  border-radius: 40rpx;
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

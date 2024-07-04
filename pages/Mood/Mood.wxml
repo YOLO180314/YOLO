@@ -3,3 +3,24 @@
   <image class="head-image" src="../../image/img/心情日记/back.png"></image>
   <text class="head-text">选择心情</text>
 </view>
+
+<view class="date">
+  <image src="/image/img/心情日记/Calendar.png" class="Calendar"/>
+  <text class="time">{{time}}</text>
+</view>
+
+<view class="mood">
+  <image src="{{moodList[index].img}}" class="mood_img"/>
+  <view class="mood_text">
+    <text>今天心情怎么样？</text>
+  </view>
+</view>
+
+<view class="section">
+  <swiper class="content" circular="true" indicator-dots="true"	 bindchange="onSwiperChange">
+    <swiper-item wx:for="{{moodList}}" class="content_item">
+      <text>{{item.name}}</text>
+    </swiper-item>
+  </swiper>
+  <button bindtap="" class="but" style="width: 300rpx; height: 90rpx;">确定</button>
+</view>

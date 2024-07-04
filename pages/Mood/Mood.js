@@ -1,66 +1,43 @@
-// pages/Mood/Mood.js
+var util =require('../../utils/util')
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    time:"",
+    moodList:[
+      {
+        name:"开心",
+        img:"/image/img/心情日记/开心.png"
+      },
+      {
+        name:"难过",
+        img:"/image/img/心情日记/难过.png"
+      },
+      {
+        name:"平静",
+        img:"/image/img/心情日记/平静.png"
+      },
+      {
+        name:"恐惧",
+        img:"/image/img/心情日记/恐惧.png"
+      },{
+        name:"愤怒",
+        img:"/image/img/心情日记/愤怒.png"
+      },
+    ],
+    index:0,
+  },
+  onLoad: function (options) {
+    var TIME = util.formatTime(new Date());
+    console.log(TIME)
+    this.setData({
+      time:TIME
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onSwiperChange: function (e) {
+    this.setData({
+      index: e.detail.current
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })
