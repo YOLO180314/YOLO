@@ -1,0 +1,28 @@
+
+  <navBar1  title="绘画世界"></navBar1>
+
+<view class="page" >
+  <image src="../../image/img/情绪创作/night-sky-5572559_1280.png"></image>
+</view>
+
+<view class="container">
+  <swiper class="swiper-container" >
+    <block wx:for="{{items}}" wx:key="index">
+      <swiper-item>
+        <text class="time-text">{{item.time}}</text>
+        <view class="image-wrapper">
+          <image src="{{item.src}}" class="swiper-image"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+
+
+<view class="footer">
+    <image class="speak-icon" src="../../image/img/情绪创作/语音 (1).png" />
+    <input class="text-input" type="text" placeholder="请输入内容" />
+    <image class="submit-icon" src="../../image/img/情绪创作/发送 (2).png" bindtap="handleSubmit" />
+ </view>

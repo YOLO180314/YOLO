@@ -1,0 +1,25 @@
+
+ <navBar1></navBar1>
+
+<view class="page" >
+  <image src="../../image/img/情绪创作/night-sky-5572559_1280.png"></image>
+</view>
+
+<view class="container">
+  <view class="item">
+    <view class="circle">
+      <image class="circle-image" src="../../image/img/情绪创作/音乐.png" mode="cover"></image>
+    </view>
+    <view class="rectangle">
+        <text>音乐</text>
+    </view>
+  </view>
+  <view class="item" bindtap="Todraw">
+    <view class="circle">
+      <image class="circle-image" src="../../image/img/情绪创作/绘画.png" mode="cover"></image>
+    </view>
+    <view class="rectangle">
+        <text>绘画</text>
+    </view>
+  </view>
+</view>

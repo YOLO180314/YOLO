@@ -1,5 +1,48 @@
-<!--pages/Diary_Overview/Diary_Overview.wxml-->
 <view class="head">
   <image class="head-image" src="../../image/img/心情日记/back.png"></image>
   <text class="head-text">日记总览</text>
 </view>
+
+<scroll-view scroll-y class="scr">
+  <view class="box">
+    <view wx:for="{{list}}" wx:key="index" class="one">
+      <view class="onedot"></view>
+      <view wx:if="{{index != list.length - 1}}" class="oneline"></view>
+      <view class="onemain">
+        <view class="onemaintitle">{{item.time}}</view>
+        <view class="con" bindtap="open" data-index="{{index}}">
+
+          <view wx:if="{{item.type == 'text'}}" class="onemaincon">{{item.con}}</view>
+
+          <view wx:if="{{item.type == 'video'}}" class="onemaincon_video">
+            <image src="{{item.thumbnail}}" class="thumbnail"></image>
+          </view>
+
+          <view wx:if="{{item.type == 'mp3'}}" class="onemaincon_mp3">
+            <text>{{item.duration}}</text>
+          </view>
+        </view>
+
+        <view>
+          <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
+            <view class="modal-dialog" wx:if="{{showModal}}">
+              <view class="time">{{currentItem.time}}</view>
+
+              <scroll-view wx:if="{{currentItem.type == 'text'}}" scroll-y class="maincon">{{currentItem.con}}</scroll-view>
+
+              <view wx:if="{{currentItem.type == 'video'}}" class="maincon_video">
+                <video src="{{currentItem.con}}" controls class="video" autoplay="true" />
+              </view>
+
+              <view wx:if="{{currentItem.type == 'mp3'}}" class="maincon_mp3">
+                <audio src="{{currentItem.con}}" controls class="mp3"></audio>
+              </view>
+
+              <button class="close" bindtap="closed" style="width: 300rpx; height: 80rpx;">关闭</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
