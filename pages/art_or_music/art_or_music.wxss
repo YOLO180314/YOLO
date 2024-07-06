@@ -1,4 +1,29 @@
 /* 自定义导航栏样式 */
+/* wxss 文件 */
+.container {
+  position: relative;
+}
+
+/* 返回键样式 */
+.back-button {
+  position: absolute;
+  top: calc(var(--statusBarHeight) + (var(--navigationBarHeight) - var(--menuButtonHeight)) / 2);
+  left: 10px; /* 你可以根据需要调整这个值 */
+  width: 44px; /* 返回键的宽度 */
+  height: 44px; /* 返回键的高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* 确保返回键在其他内容之上 */
+}
+
+/* 返回键图标 */
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
 image {
   position: absolute;
   left: 0;

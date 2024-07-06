@@ -1,8 +1,8 @@
-<!--components/navBar1/navBar1.wxml-->
-<text>components/navBar1/navBar1.wxml</text>
-<view class="navbar" style="background:transparent;height:{{navbarHeight}}px">
-  <view style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px;" class="arrow-content">
-    <view class="arrow" bindtap="handleGoToBack"></view>
-  </view>
-  <view class="text" style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px">{{title}}</view>
+<!-- 自定义导航栏 -->
+<view style="height: {{navigationBarAndStatusBarHeight}}px;background-color:transparent;width: 100%;display: flex;flex-direction: row;">
+    <view style="padding-top:{{statusBarHeight+10}}px;width: 100%;">
+        <view style="float: left;margin-left: 300rpx;font-size: 16px;color:white"> 
+            <text>{{title}}{{wdsl > 0 ? '('+wdsl+')' : ''}}</text>
+        </view>
+    </view>
 </view>

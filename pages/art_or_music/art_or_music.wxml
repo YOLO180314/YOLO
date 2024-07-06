@@ -1,5 +1,5 @@
 
- <navBar1></navBar1>
+ <navBar1 title="情绪创作"></navBar1>
 
 <view class="page" >
   <image src="../../image/img/情绪创作/night-sky-5572559_1280.png"></image>

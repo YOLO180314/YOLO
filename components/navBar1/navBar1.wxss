@@ -1,32 +1,12 @@
-
-.navbar{
-  width: 100%;
+/* 标题 */
+.headline{
+  font-weight: bolder;
+  font-size: 16px;
   position: fixed;
-  top: 0;
-  z-index: 99;
-}
-.arrow-content{
-  position: absolute;
-  left: 40rpx;
-  z-index: 999;
+  width: 100%;
+  line-height: 70rpx;
+  padding-left: 20rpx;
+z-index: 9;
   display: flex;
-  align-items: center;
-}
-.arrow{
-  width: 20rpx;
-  height: 20rpx;
-  border: 5rpx solid #FFFFFF;
-  border-right-color:transparent;
-  border-bottom-color:transparent;
-  transform: rotate(-45deg);
-}
-.text{
-  position: absolute;
-  left: 0;
-  right: 0;
-  font-size: 32rpx;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-bottom: 10rpx;
 }

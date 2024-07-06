@@ -1,5 +1,7 @@
 {
+  "component": true,
+  "navigationStyle": "custom",
   "usingComponents": {
-    "navBar": "/components/navBar1/navBar1"
+    "navBar1": "/components/navBar1/navBar1"
   }
 }

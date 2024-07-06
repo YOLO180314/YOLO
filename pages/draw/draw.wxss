@@ -9,6 +9,22 @@ image {
   z-index: -999;
 }
 
+
+.title {
+  margin-left: 8px; /* 为了给返回按钮留出空间，调整标题的位置 */
+  font-size: 16px; /* 标题文字的大小 */
+  color:white; /* 标题文字的颜色 */
+  margin-top: 40px;
+  font-weight: middle; /* 标题文字的粗细 */
+  flex: 1; /* 使标题居中显示 */
+  text-align: center; /* 使标题文本居中对齐 */
+}
+.back-icon{
+  margin-top: -22px;
+}
+
+
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -32,7 +48,7 @@ image {
   width: 20px; /* 根据图标的实际大小调整 */
   height: 20px; /* 根据图标的实际大小调整 */
   top:13px;
-  margin-left: 295px; /* 如果需要可以调整左边距 */
+  margin-left: 695rpx; /* 如果需要可以调整左边距 */
 }
 .speak-icon{
   width: 28px; /* 根据图标的实际大小调整 */
@@ -42,7 +58,7 @@ image {
 }
 .text-input {
   flex: 1; /* 使输入框占据剩余空间 */
-  margin: 10px 20px; /* 可根据需要调整输入框的左右边距 */
+  margin: 20px 30px; /* 可根据需要调整输入框的左右边距 */
   padding: 7px; /* 可根据需要调整输入框的内边距 */
   border: 1px solid #ccc; /* 可根据需要调整输入框的边框 */
   border-radius: 5px; /* 可根据需要调整输入框的圆角 */
@@ -54,7 +70,7 @@ image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:40px;
+  margin-top:10px;
 
 }
 /* container 样式 */
