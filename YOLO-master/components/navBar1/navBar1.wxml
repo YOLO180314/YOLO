@@ -1,8 +1,0 @@
-<!--components/navBar1/navBar1.wxml-->
-<text>components/navBar1/navBar1.wxml</text>
-<view class="navbar" style="background:transparent;height:{{navbarHeight}}px">
-  <view style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px;" class="arrow-content">
-    <view class="arrow" bindtap="handleGoToBack"></view>
-  </view>
-  <view class="text" style="height:{{capsuleHeight}}px;top:{{capsuleTop}}px">{{title}}</view>
-</view>
