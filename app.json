@@ -16,6 +16,7 @@
     "pages/chatPage/chatPage",
     "pages/community/community",
     "pages/open/open"
+ 
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -37,12 +38,13 @@
         "iconPath": "image/星球 (2).png",
         "selectedIconPath": "image/星球 (2).png"
       },
-      
+
       {
         "pagePath": "pages/art_or_music/art_or_music",
         "text": "情绪创作",
         "iconPath": "image/星球 (2).png",
         "selectedIconPath": "image/星球 (2).png"
+
       },
       {
         "pagePath": "pages/community/community",

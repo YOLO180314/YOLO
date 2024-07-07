@@ -1,0 +1,31 @@
+<!--pages/community/community.wxml-->
+<view class="comm" >
+  <image src="../../image/communityb.png"></image>
+</view>
+<view class="up">
+    <text class="p">太空留言</text>
+</view>
+<view class="secret1" bindtap="Toopen">
+    <image src="../../image/img/匿名社区/罐子 (1).png" class="jar" ></image>
+    <image src="../../image/img/匿名社区/星星.png" class="starr"></image>
+</view>
+<view class="secret2">
+    <image src="../../image/img/匿名社区/罐子 (1).png" class="jar"></image>
+    <image src="../../image/img/匿名社区/星星.png" class="starr"></image>
+</view>
+<view class="secret3">
+    <image src="../../image/img/匿名社区/罐子 (1).png" class="jar"></image>
+    <image src="../../image/img/匿名社区/星星.png" class="starr"></image>
+</view>
+<view class="secret4">
+    <image src="../../image/img/匿名社区/罐子 (1).png" class="jar"></image>
+    <image src="../../image/img/匿名社区/星星.png" class="starr"></image>
+</view>
+<view>
+    <image src="../../image/img/匿名社区/发布.png" class="open"></image>
+</view>
+<view class="starry">
+    <image src="../../image/img/匿名社区/sharpicons_cross.png" class="shining1"></image>
+    <image src="../../image/img/匿名社区/sharpicons_cross.png" class="shining2"></image>
+    <image src="../../image/img/匿名社区/sharpicons_cross.png" class="shining3"></image>
+</view>

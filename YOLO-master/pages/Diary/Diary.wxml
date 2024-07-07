@@ -1,0 +1,36 @@
+<!--pages/Diary/Diary.wxml-->
+<view class="head">
+  <image class="head-image" src="../../image/img/心情日记/back.png"></image>
+  <text class="head-text">写日记</text>
+</view>
+
+<view class="time">
+  <text class="time-text">{{time}}</text>
+</view>
+
+<view class="form_area">
+
+  <form bindsubmit="formSubmit" bindreset="formReset" id="form">
+    <view class="content">
+
+      <view class="form_head">
+        <text class="form-text">{{Mood}}</text>
+        <image src="{{Img}}" class="Mood_img" />
+      </view>
+
+      <textarea class="input" name="remark" placeholder="点击这里记录心情吧~" auto-focus="true" maxlength="1000" />
+
+      <view class="load">
+        <image src="/image/img/心情日记/录音.png" class="load_img" />
+        <image src="/image/img/心情日记/照相机.png" class="load_img" />
+      </view>
+
+    </view>
+
+    <view class="button_area">
+      <image src="/image/img/心情日记/wrong.png" class="load_img" />
+      <image src="/image/img/心情日记/correct.png" class="load_img" />
+    </view>
+  </form>
+
+</view>

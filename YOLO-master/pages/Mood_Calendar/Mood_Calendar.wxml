@@ -1,0 +1,5 @@
+<!--pages/Mood_Calendar/Mood_Calendar.wxml-->
+<view class="head">
+  <image class="head-image" src="../../image/img/心情日记/back.png"></image>
+  <text class="head-text">心情日历</text>
+</view>
