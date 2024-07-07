@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Mood/Mood",
+    "pages/Diary/Diary",
+    "pages/Diary_Overview/Diary_Overview",
+    "pages/Mood_Calendar/Mood_Calendar",
+    "pages/logs/logs",
+    "pages/draw/draw",
+    "pages/art_or_music/art_or_music",
+    "pages/community/community",
+    "pages/open/open",
+    "pages/AIchat/AIchat",
+    "pages/me/me"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#00BFFF",
+    "backgroundColor": "#aa9bed",
+    "borderStyle": "black",
+    "position": "bottom",
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/星球 (2).png",
+        "selectedIconPath": "image/星球 (2).png"
+      },
+      
+      {
+        "pagePath": "pages/art_or_music/art_or_music",
+        "text": "情绪创作",
+        "iconPath": "image/星球 (2).png",
+        "selectedIconPath": "image/星球 (2).png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "秘密社区",
+        "iconPath": "image/星球 (2).png",
+        "selectedIconPath": "image/星球 (2).png"
+      },
+      {
+        "pagePath": "pages/AIchat/AIchat",
+        "text": "在线云聊",
+        "iconPath": "image/星球 (2).png",
+        "selectedIconPath": "image/星球 (2).png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "image/星球 (2).png",
+        "selectedIconPath": "image/星球 (2).png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

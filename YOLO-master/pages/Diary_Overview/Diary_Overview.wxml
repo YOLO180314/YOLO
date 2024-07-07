@@ -1,0 +1,5 @@
+<!--pages/Diary_Overview/Diary_Overview.wxml-->
+<view class="head">
+  <image class="head-image" src="../../image/img/心情日记/back.png"></image>
+  <text class="head-text">日记总览</text>
+</view>
