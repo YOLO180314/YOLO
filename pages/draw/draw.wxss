@@ -1,0 +1,115 @@
+/* pages/draw/draw.wxss */
+image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
+.title {
+  margin-left: 8px; /* 为了给返回按钮留出空间，调整标题的位置 */
+  font-size: 16px; /* 标题文字的大小 */
+  color:white; /* 标题文字的颜色 */
+  margin-top: 40px;
+  font-weight: middle; /* 标题文字的粗细 */
+  flex: 1; /* 使标题居中显示 */
+  text-align: center; /* 使标题文本居中对齐 */
+}
+.back-icon{
+  margin-top: -22px;
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between; /* 使内容均匀分布 */
+  padding: 0 10px; /* 可根据需要调整内边距 */
+}
+
+
+
+.submit-icon {
+  width: 20px; /* 根据图标的实际大小调整 */
+  height: 20px; /* 根据图标的实际大小调整 */
+  top:13px;
+  margin-left: 695rpx; /* 如果需要可以调整左边距 */
+}
+.speak-icon{
+  width: 28px; /* 根据图标的实际大小调整 */
+  height: 28px; /* 根据图标的实际大小调整 */
+  top:12px;
+  margin-right: 10px; /* 调整图标之间的间距 */
+}
+.text-input {
+  flex: 1; /* 使输入框占据剩余空间 */
+  margin: 20px 30px; /* 可根据需要调整输入框的左右边距 */
+  padding: 7px; /* 可根据需要调整输入框的内边距 */
+  border: 1px solid #ccc; /* 可根据需要调整输入框的边框 */
+  border-radius: 5px; /* 可根据需要调整输入框的圆角 */
+}
+/* container 样式 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:10px;
+}
+/* container 样式 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* swiper 容器样式 */
+.swiper-container {
+  width: 100%;
+  height: 350px; /* 根据需要调整高度 */
+}
+
+/* 图片包装容器样式 */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* swiper 图片样式 */
+.swiper-image {
+  width: 80%;
+  height: 90%;
+  margin-left:30px;
+}
+
+/* 时间文本样式 */
+.time-text {
+  position: absolute;
+  top: 10px; /* 调整时间文本与图片顶部的距离 */
+  left: 40px; /* 调整时间文本与图片左边的距离 */
+  color: white; /* 时间文本的颜色 */
+  padding: 5px 10px; /* 内边距 */
+  border-radius: 5px; /* 圆角 */
+  font-size: 14px; /* 字体大小 */
+  z-index: 10; /* 确保文本在图片上方 */
+}
+

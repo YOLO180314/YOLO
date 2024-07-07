@@ -1,0 +1,74 @@
+/* pages/login/login.wxss */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body .top {
+  background-color: #997CA2;
+  width: 100%;  
+  height: 50px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.body .top .back {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 5px;
+  left: 10px;
+}
+
+.body .top .topTitle {
+  color: #ffffff;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.body .avatar {
+  width: 80px !important;
+  height: 80px !important;
+  padding: 0px;
+}
+
+.body .avatar .loginAvat {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
+.body .inputName {
+  display: flex;
+  /* border: 2px solid pink; */
+  margin-top: 40px;
+  padding: 10px;
+  border-top: 1.5px dashed #997CA2;
+  border-bottom: 1.5px dashed #997CA2;
+}
+
+.body .inputName .inputMessage {
+  padding: 5px;
+}
+
+.body .inputName .inputBox {
+  width: 130px;
+  padding: 5px;
+}
+
+.body .loginButton {
+  border: 2px solid #997CA2;
+  margin-top: 40px;
+  width: 130px;
+  color: #ffffff;
+  font-weight: normal;
+  background-color: #997ca2a1;
+  border:2px solid #997CA2;
+  box-shadow: 1px 1px 2px 2px #a385ac8e;
+}

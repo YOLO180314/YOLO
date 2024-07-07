@@ -1,0 +1,30 @@
+<!--pages/chatPage/chatPage.wxml-->
+<view class="body">
+  <view class="top">
+    <image src="../../image/AIchat/blackBack.png" class="back" bind:tap="goBack"/>
+    <text class="topTitle">心理沟通</text>
+  </view>
+
+  <view class="time">
+    <text class="time-text">2024年7月4号</text>
+  </view>
+
+  <view class="content" wx:for="{{ message }}" wx:key="index">
+    <view class="user" wx:if="{{ item.role == 'user' }}">
+      <view class="userContent">{{ item.content }}</view>
+      <view class="sendTime">{{ item.time }}</view>
+    </view>
+
+    <view class="assistant" wx:else>
+      <view class="assistantContent">{{ item.content }}</view>
+      <view class="answerTime">{{ item.time }}</view>
+    </view>
+  </view>
+
+  <view class="sendMessage">
+    <image class="pic" src="../../image/AIchat/pic.png"/>
+    <image src="../../image/AIchat/speak.png" class="voice"/>
+    <input type="text" class="message" placeholder="输入想表达的心情吧~"/>
+    <image src="../../image/AIchat/send.png" class="send"/>
+  </view>
+</view>

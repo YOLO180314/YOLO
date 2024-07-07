@@ -1,0 +1,31 @@
+<!--pages/comment/comment.wxml-->
+<view class="body">
+  <view class="top">
+    <image src="../../image/Me/back.png" class="back" bind:tap="goBack"/>
+    <text class="topTitle">意见反馈</text>
+  </view>
+
+  <view class="commentBody">
+    <text class="introduction">我们一直在努力改进应用程序，您的体验对我们很重要。如果您看到任何问题或错误，或者有着许多建议和想法，请反馈给我们，我们会积极改进的！
+    </text>
+
+    <view class="inputInf">
+      <view class="inf">
+        <text class="star">*</text>
+        <text class="name">昵称</text>
+       <input type="text" class="inputBox" placeholder="请输入昵称" bindinput="getName"/>
+     </view>
+    
+      <view class="inf">
+        <text class="email">邮箱</text>
+        <input type="text" class="inputBox" placeholder="请输入邮箱" bindinput="getEmail"/>
+      </view>
+
+      <text class="star">*</text>
+      <text>评论</text>
+      <textarea class="comment" placeholder="请输入评论" bindinput="getComment"></textarea>
+    </view>
+
+    <button class="submit" bindtap="submitUp">提交</button>
+  </view>
+</view>
