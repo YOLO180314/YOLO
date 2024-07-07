@@ -1,0 +1,29 @@
+<view class="body">
+  <text class="topTitle">我的</text>
+  <view class="loginPart">
+    <image class="avatarurl" src="{{ userInfo ? userInfo.avatarUrl : avatarpic }}"></image>
+    <text class="nickname" wx:if="{{ login }}">{{ userInfo.nickName }}</text>
+    <button class="loginBut" wx:else bind:tap="toGetinf">请先登录</button>
+  </view>
+
+  <view class="cell-body">
+    <view class="cell-list">
+      <view 
+        class="cell" 
+        wx:for="{{ cellList }}" 
+        wx:key="index"
+        data-page="{{ item.page }}"
+        bindtap="toDetail"
+      >
+        <view class="cell-left">
+          <image class="cell-icon" src="{{ item.url }}"></image>
+          <text class="cell-left-text">{{ item.text }}</text>
+        </view>
+        <view class="cell-right">
+          <image class="big-content" src="../../image/Me/big.png"></image>
+        </view>
+      </view>
+    </view>
+  </view> 
+
+</view>

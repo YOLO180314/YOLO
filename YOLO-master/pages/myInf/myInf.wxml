@@ -1,0 +1,45 @@
+<!--pages/myInf/myInf.wxml-->
+<view class="body">
+  <view class="top">
+    <image src="../../image/Me/back.png" class="back" bind:tap="goBack"/>
+    <text class="topTitle">我的信息</text>
+  </view>
+
+  <view class="inf">
+    <view class="inf-item">
+      <text>头像</text>
+      <button class="inf-buttom" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="inf-image" src="{{ avatarUrl }}"></image>
+      </button>
+    </view>
+    <view class="inf-item">
+      <text>昵称</text>
+      <view class="phone-num">
+        <view class="input-close" wx:if="{{ edit1 }}">
+          <input class="inf-name" type="nickname" placeholder="请输入名称" value="{{ nickName }}" bindinput="getnickName" />
+          <image wx:if="{{ nickName.length > 0 }}" class="close-icon" src="../../image/Me/delete.png" bindtap="deletenickName"></image>
+        </view>
+        <view class="content" wx:else>{{ nickName }}</view>
+        <view class="icon">
+          <image wx:if="{{ !edit1 }}" bindtap="toEdit1" class="edit-icon" src="../../image/Me/edit.png"></image>
+          <text wx:else bindtap="toEdit1">取消</text>
+        </view>
+      </view>
+    </view>
+    <view class="inf-item">
+      <text>联系方式</text>
+      <view class="phone-num">
+        <view class="input-close" wx:if="{{ edit }}">
+          <input class="text-input" type="text" placeholder="手机号/微信号/QQ:xx" value="{{ phonenum }}" bindinput="getPhonenum" />
+          <image wx:if="{{ phonenum.length > 0 }}" class="close-icon" src="../../image/Me/delete.png" bindtap="deletePhonenum"></image>
+        </view>
+        <view class="content" wx:else>{{ _phonenum }}</view>
+        <view class="icon">
+          <image wx:if="{{ !edit }}" bindtap="toEdit" class="edit-icon" src="../../image/Me/edit.png"></image>
+          <text wx:else bindtap="toEdit">取消</text>
+        </view>
+      </view>
+    </view>
+    <button wx:if="{{ edit||edit1 }}" class="save" bindtap="saveChange">保存修改</button>
+  </view>
+</view>
