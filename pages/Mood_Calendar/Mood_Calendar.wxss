@@ -32,3 +32,93 @@ page {
   text-align: center;
   color: #fff;
 }
+
+.main{
+  height: 800rpx;
+  width: 100%;
+  margin-top: 80rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.mon{
+  padding-top: 15rpx;
+  padding-bottom: 10rpx;
+}
+
+.mon_hover{
+  background-color: #c1b7f1;
+}
+
+.calender_area{
+  height: 100%;
+  width: 80%;
+  border-radius: 50rpx;
+  border: 10rpx solid #aa9bed;
+  background-color: white;
+  overflow: hidden;
+}
+
+.button_area{
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot_img{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.but{
+  background-color: #aa9bed;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.but_img{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.calendar {
+  --calendar-height: 300px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 300rpx;
+  width: 450rpx;
+}
+
+.popup-content text {
+  margin-bottom: 10px;
+  font-size: 36rpx;
+  color: rgb(37, 37, 37);
+}
+
+.popup-content image {
+  width: 50px;
+  height: 50px;
+}
+

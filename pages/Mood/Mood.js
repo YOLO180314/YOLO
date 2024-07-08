@@ -40,4 +40,18 @@ Page({
     });
   },
 
+  back:function(){
+    wx.navigateBack(
+      {
+        delta:1
+      }
+    )
+  },
+
+  diary:function(){
+    wx.navigateTo({
+      url: '../Diary/Diary',  
+    })
+  }
+
 })

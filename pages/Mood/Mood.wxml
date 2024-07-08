@@ -1,6 +1,6 @@
 <!--pages/Mood/Mood.wxml-->
 <view class="head">
-  <image class="head-image" src="../../image/img/心情日记/back.png"></image>
+  <image class="head-image" src="../../image/img/心情日记/back.png" bind:tap="back"></image>
   <text class="head-text">选择心情</text>
 </view>
 
@@ -22,5 +22,5 @@
       <text>{{item.name}}</text>
     </swiper-item>
   </swiper>
-  <button bindtap="" class="but" style="width: 300rpx; height: 90rpx;">确定</button>
+  <button bindtap="" class="but" style="width: 300rpx; height: 90rpx;" bindtap="diary">确定</button>
 </view>

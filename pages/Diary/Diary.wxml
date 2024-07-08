@@ -1,6 +1,6 @@
 <!--pages/Diary/Diary.wxml-->
 <view class="head">
-  <image class="head-image" src="../../image/img/心情日记/back.png"></image>
+  <image class="head-image" src="../../image/img/心情日记/back.png" bind:tap="back"></image>
   <text class="head-text">写日记</text>
 </view>
 
@@ -10,7 +10,7 @@
 
 <view class="form_area">
 
-  <form bindsubmit="formSubmit" bindreset="formReset" id="form">
+  <form bindsubmit="formSubmit" id="form">
     <view class="content">
 
       <view class="form_head">
@@ -28,8 +28,8 @@
     </view>
 
     <view class="button_area">
-      <image src="/image/img/心情日记/wrong.png" class="load_img" />
-      <image src="/image/img/心情日记/correct.png" class="load_img" />
+      <image src="/image/img/心情日记/wrong.png" class="load_img" bind:tap="back"/>
+      <image src="/image/img/心情日记/correct.png" class="load_img" bind:tap="formSubmit"/>
     </view>
   </form>
 

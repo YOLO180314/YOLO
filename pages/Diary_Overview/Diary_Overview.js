@@ -86,6 +86,12 @@ Page({
       currentItem: this.data.list[index]
     });
   },
-
+  back:function(){
+    wx.navigateBack(
+      {
+        delta:1
+      }
+    )
+  },
   
 });

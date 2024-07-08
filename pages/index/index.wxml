@@ -18,14 +18,14 @@
 </view>
 
 <view class="start">
-  <button class="start-button" style="width: 320rpx;">这就开始</button>
+  <button class="start-button" style="width: 320rpx;" bindtap="mood">这就开始</button>
 </view>
 
 <view class="otherchooses">
-  <button class="other-button" style="width: 340rpx; height: 70rpx;">
+  <button class="other-button" style="width: 340rpx; height: 70rpx;" bindtap="Calendar">
   <image class="button-icon" src="../../image/日历.png"></image>
   查看心情日历</button>
-  <button class="other-button" style="width: 340rpx; height: 70rpx;">
+  <button class="other-button" style="width: 340rpx; height: 70rpx;" bindtap="diary">
   <image class="button-icon" src="../../image/飞机场_填充.png"></image>
   查看往日日记</button>
 </view>
