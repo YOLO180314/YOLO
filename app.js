@@ -5,6 +5,16 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    // 检查云能力并初始化
+    if (!wx.cloud) {
+      console.error("请使用云能力")
+    } else {
+      wx.cloud.init({
+        env: 'cloud1-9gwba3ro353a068f',
+        traceUser: true // 移除分号
+      })
+    }
+
     // 登录
     wx.login({
       success: res => {
