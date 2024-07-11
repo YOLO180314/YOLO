@@ -15,5 +15,19 @@ Page({
       time:TIME
     })
   },
+
+  back:function(){
+    wx.navigateBack(
+      {
+        delta:1
+      }
+    )
+  },
+
+  formSubmit:function(){
+    wx.navigateTo({
+      url: '../Mood_Calendar/Mood_Calendar',  
+    })
+  }
   
 })

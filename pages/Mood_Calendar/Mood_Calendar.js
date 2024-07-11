@@ -1,66 +1,99 @@
 // pages/Mood_Calendar/Mood_Calendar.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    year: 2024,
+    month: ['一月', '二月', '三月', '四月',
+      '五月', '六月', '七月', '八月',
+      '九月', '十月', '十一月', '十二月',],
+    minDate: new Date(2024, 0, 1).getTime(),
+    maxDate: new Date(2030, 11, 31).getTime(),
+    moodData: {
+      '2024-07-01': '/image/img/心情日记/平静.png',
+      '2024-07-02': '/image/img/心情日记/开心.png',
+      '2024-07-03': '/image/img/心情日记/恐惧.png',
+      '2024-07-04': '/image/img/心情日记/愤怒.png',
+      '2024-07-05': '/image/img/心情日记/难过.png',
+      '2024-07-06': '/image/img/心情日记/开心.png',
+      '2024-07-07': '/image/img/心情日记/恐惧.png',
+      '2024-07-08': '/image/img/心情日记/平静.png',
+      '2024-07-09': '/image/img/心情日记/开心.png',
+      '2024-07-10': '/image/img/心情日记/恐惧.png',
+    },
+    showPopup: false,
+    selectedDate: '',
+    selectedMoodImage: '',
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  back: function () {
+    wx.navigateBack(
+      {
+        delta: 1
+      }
+    )
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  formatter(day) {
+    const date = `${day.year}-${day.month < 10 ? '0' + day.month : day.month}-${day.day < 10 ? '0' + day.day : day.day}`;
+    const moodImage = this.data.moodData[date];
+    if (moodImage) {
+      day.moodImage = moodImage;
+    }
+    return day;
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  onDayClick(event) {
+    console.log("Event object:", event); 
+    const selectedDate = event.detail; 
+    let date, moodImage;
+  
+    if (selectedDate instanceof Date) {
+      date = `${selectedDate.getFullYear()}-${(selectedDate.getMonth() + 1).toString().padStart(2, '0')}-${selectedDate.getDate().toString().padStart(2, '0')}`;
+      moodImage = this.data.moodData && this.data.moodData[date];
+  
+      this.setData({
+        selectedDate: date,
+        selectedMoodImage: moodImage || '',
+        showPopup: true
+      });
+  
+      console.log("selectedDate:", this.data.selectedDate);
+      console.log("selectedMoodImage:", this.data.selectedMoodImage);
+      console.log("showPopup:", this.data.showPopup);
+    } else {
+      console.error("selectedDate is not a Date object:", selectedDate);
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
 
+  onClose() {
+    this.setData({
+      showPopup: false
+    });
+  },
+  onMonthTap(event) {
+    const monthIndex = event.currentTarget.dataset.index;
+    const calendar = this.selectComponent('#calendar');
+    if (calendar) {
+      calendar.setData({
+        currentDate: new Date(this.data.year, monthIndex, 1).getTime()
+      });
+    } else {
+      console.error("Calendar component not found");
+    }
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
+  onPrevYear() {
+    this.setData({
+      year: this.data.year - 1
+    });
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
+  onNextYear() {
+    this.setData({
+      year: this.data.year + 1
+    });
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

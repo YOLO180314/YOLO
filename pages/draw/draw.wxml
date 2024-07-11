@@ -1,5 +1,4 @@
 <view class="navBar" style="position: relative; width: 100%;">
-  <!-- 返回按钮 -->
   <image class="back-icon" src="../../image/白色返回键.png" style="position: absolute; left: 10px; top: {{statusBarHeight}}px; width: 24px; height: 24px; z-index: 999;" bindtap="handleBack" />
   <view class="title">绘画世界</view>
 </view>
@@ -15,13 +14,18 @@
         <text class="time-text">{{item.time}}</text>
         <view class="image-wrapper">
           <image src="{{item.src}}" class="swiper-image"></image>
+          <image src="{{item.src2}}" class="upper-image"></image>
         </view>
       </swiper-item>
     </block>
   </swiper>
 </view>
 
-<view class="footer">
-  <image class="speak-icon" src="../../image/img/情绪创作/语音 (1).png" />
-  <image class="submit-icon" src="../../image/img/情绪创作/发送 (2).png" bindtap="submitArtTask" />
+
+<view class="container">
+  <view class="footer">
+    <image class="speak-icon" src="../../image/img/情绪创作/语音 (1).png" />
+    <input class="text-input" bindinput="inputChange" placeholder="请输入内容" value="{{prompt}}"/>
+    <image class="submit-icon" src="../../image/img/情绪创作/发送 (2).png" bindtap="submitForm" />
+  </view>
 </view>

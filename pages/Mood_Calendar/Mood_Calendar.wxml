@@ -1,5 +1,37 @@
 <!--pages/Mood_Calendar/Mood_Calendar.wxml-->
 <view class="head">
-  <image class="head-image" src="../../image/img/心情日记/back.png"></image>
+  <image class="head-image" src="../../image/img/心情日记/back.png" bind:tap="back"></image>
   <text class="head-text">心情日历</text>
 </view>
+
+<view class="main">
+  <view class="nav">
+    <view class="year"><text decode="{{true}}">&lt; {{year}} &gt;</text></view>
+    <view class="mon" hover-class="mon_hover" wx:for="{{month}}" wx:key="index" bindtap="onMonthTap" data-index="{{index}}">
+      {{item}}
+    </view>
+  </view>
+  <view class="calender_area">
+
+    <van-calendar id="calendar" title="心情日历" poppable="{{ false }}" show-confirm="{{ false }}" class="calendar" show-subtitle="{{ false }}" color="#aa9bed" row-height="38" min-date="{{minDate}}" max-date="{{maxDate}}" date-formatter="formatter" bind:select="onDayClick" />
+
+
+  </view>
+</view>
+
+<view class="button_area">
+  <view class="but">
+    <image src="/image/img/心情日记/左箭头.png" class="but_img" bindtap="onPrevYear"/>
+  </view>
+  <image src="/image/img/心情日记/正面漂浮宇航员.png" class="bot_img" />
+  <view class="but">
+    <image src="/image/img/心情日记/右箭头.png" class="but_img" bindtap="onNextYear"/>
+  </view>
+</view>
+
+<van-popup show="{{showPopup}}" bind:close="onClose">
+  <view class="popup-content">
+    <text>{{selectedDate}}</text>
+    <image src="{{selectedMoodImage}}" mode="widthFix" style="width: 80px; height: 80px;" />
+  </view>
+</van-popup>

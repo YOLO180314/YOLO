@@ -1,5 +1,6 @@
-
- <navBar1 title="情绪创作"></navBar1>
+<view style="color:white;font-size:18px; margin-left:40%;margin-top:8%;">
+ 情绪创作
+</view>
 
 <view class="page" >
   <image src="../../image/img/情绪创作/night-sky-5572559_1280.png"></image>

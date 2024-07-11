@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "component": true,
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
 }

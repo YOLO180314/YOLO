@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class="body">
+  <view class="top">
+    <image src="../../image/Me/back.png" class="back" bind:tap="goBack"/>
+    <text class="topTitle">登录</text>
+  </view>
+
+  <button class="avatar" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+    <image class="loginAvat" src="{{ avatarUrl }}"/>
+  </button>
+
+  <view class="inputName">
+    <text class="inputMessage">昵称：</text>
+    <input type="nickname" class="inputBox" placeholder="请输入您的昵称" value="{{ nickName }}" bind:change="onNickName"/>
+  </view>
+
+  <button class="loginButton" bind:tap="LoginSubmit">
+  登录</button>
+</view>

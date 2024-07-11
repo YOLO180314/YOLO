@@ -7,7 +7,16 @@
     "pages/Mood_Calendar/Mood_Calendar",
     "pages/logs/logs",
     "pages/draw/draw",
-    "pages/art_or_music/art_or_music"
+    "pages/art_or_music/art_or_music",
+    "pages/AIchat/AIchat",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/comment/comment",
+    "pages/myInf/myInf",
+    "pages/chatPage/chatPage",
+    "pages/community/community",
+    "pages/open/open"
+ 
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -29,17 +38,31 @@
         "iconPath": "image/星球 (2).png",
         "selectedIconPath": "image/星球 (2).png"
       },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "个人中心",
-        "iconPath": "image/星球 (2).png",
-        "selectedIconPath": "image/星球 (2).png"
-      },
+
       {
         "pagePath": "pages/art_or_music/art_or_music",
         "text": "情绪创作",
         "iconPath": "image/星球 (2).png",
         "selectedIconPath": "image/星球 (2).png"
+
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "银河社区",
+        "iconPath": "image/星球 (2).png",
+        "selectedIconPath": "image/星球 (2).png"
+      },
+      {
+        "pagePath": "pages/AIchat/AIchat",
+        "text": "在线云聊",
+        "iconPath": "image/tabbar/chat.png",
+        "selectedIconPath": "image/tabbar/chat.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "image/tabbar/me.png",
+        "selectedIconPath": "image/tabbar/me.png"
       }
     ]
   },

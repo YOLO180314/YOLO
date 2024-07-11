@@ -9,7 +9,6 @@ image {
   z-index: -999;
 }
 
-
 .title {
   margin-left: 8px; /* 为了给返回按钮留出空间，调整标题的位置 */
   font-size: 16px; /* 标题文字的大小 */
@@ -45,73 +44,82 @@ image {
 
 
 .submit-icon {
-  width: 20px; /* 根据图标的实际大小调整 */
-  height: 20px; /* 根据图标的实际大小调整 */
+  width: 20px; 
+  height: 20px; 
   top:13px;
-  margin-left: 695rpx; /* 如果需要可以调整左边距 */
+  margin-left: 695rpx; 
 }
 .speak-icon{
-  width: 28px; /* 根据图标的实际大小调整 */
-  height: 28px; /* 根据图标的实际大小调整 */
+  width: 28px;
+  height: 28px; 
   top:12px;
-  margin-right: 10px; /* 调整图标之间的间距 */
+  margin-right: 10px;
 }
 .text-input {
   flex: 1; /* 使输入框占据剩余空间 */
-  margin: 20px 30px; /* 可根据需要调整输入框的左右边距 */
-  padding: 7px; /* 可根据需要调整输入框的内边距 */
-  border: 1px solid #ccc; /* 可根据需要调整输入框的边框 */
-  border-radius: 5px; /* 可根据需要调整输入框的圆角 */
+  margin: 20px 30px;
+  padding: 7px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
 }
-/* container 样式 */
+
 .container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:10px;
-
-}
-/* container 样式 */
-.container {
+  margin-top:18px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-/* swiper 容器样式 */
+
+
 .swiper-container {
   width: 100%;
-  height: 350px; /* 根据需要调整高度 */
+  height: 390px; 
 }
 
-/* 图片包装容器样式 */
+
 .image-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* swiper 图片样式 */
+
 .swiper-image {
   width: 80%;
   height: 90%;
   margin-left:30px;
+  position: relative;
+  z-index: 1; 
 }
 
-/* 时间文本样式 */
+
 .time-text {
   position: absolute;
-  top: 10px; /* 调整时间文本与图片顶部的距离 */
-  left: 40px; /* 调整时间文本与图片左边的距离 */
-  color: white; /* 时间文本的颜色 */
-  padding: 5px 10px; /* 内边距 */
-  border-radius: 5px; /* 圆角 */
-  font-size: 14px; /* 字体大小 */
-  z-index: 10; /* 确保文本在图片上方 */
+  margin-top: 20px; 
+  left: 40px; 
+  color:rgb(100, 27, 100); 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  font-size: 18px; 
+  z-index: 88; 
 }
+
+.upper-image {
+  width: 60%;
+  height: 60%;
+  z-index:999;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 2; /* 确保 upper-image 在 swiper-image 上方 */
+}
+
 

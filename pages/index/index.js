@@ -15,4 +15,22 @@ Page({
     })
   },
   
+  mood:function(){
+    wx.navigateTo({
+      url: '../Mood/Mood',  
+    })
+  },
+
+  Calendar:function(){
+    wx.navigateTo({
+      url: '../Mood_Calendar/Mood_Calendar',  
+    })
+  },
+
+  diary:function(){
+    wx.navigateTo({
+      url: '../Diary_Overview/Diary_Overview',  
+    })
+  },
+
 })

@@ -1,6 +1,10 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "crypto-js": "^4.2.0",
     "sha1": "^1.1.1"
+=======
+    "@vant/weapp": "^1.11.6"
+>>>>>>> 31d71bae5c03686af234ef16fa2e68cdce298cb2
   }
 }

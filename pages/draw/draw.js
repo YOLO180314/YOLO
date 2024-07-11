@@ -1,8 +1,61 @@
-Page({
-  
-  
-})
 
+const util = require('../../utils/util.js');
+
+Page({
+  data: {
+    items: [
+      { src: "../../image/img/情绪创作/book.png", time: "2024年7月3日", src2: '../../image/img/情绪创作/考试结束.jpg'},
+      { src: "../../image/img/情绪创作/book.png", time: "2024年7月5日", src2: 'https://sgw-dx.xf-yun.com/api/v1/sparkdesk/multimodal_image_213088094U047650a7ppv.jpg?authorization=c2ltcGxlLWp3dCBhaz1zcGFya2Rlc2s4MDAwMDAwMDAwMDE7ZXhwPTMyOTc0NjQwNTQ7YWxnbz1obWFjLXNoYTI1NjtzaWc9SGZRdUhvbzJleFVPV29jTUM2dUpMOXRJQ04rSE9zMW1yNUFudXR0ZWF4OD0=&x_location=7YfmxI7B7uKO7jlRxIftd6UZdo=='},
+    ],
+    prompt: '', // 存储输入框的值
+    TIME: '', // 新增一个 TIME 属性
+   
+  },
+  onLoad: function () {
+    var TIME = util.formatTime(new Date());
+    console.log(TIME);
+    this.setData({
+      TIME: TIME  
+    });
+  },
+  handleBack: function() {
+    wx.navigateBack({
+      delta: 1  
+    });
+  },
+  inputChange: function (e) {
+    this.setData({
+      prompt: e.detail.value,
+    });
+  },
+  
+
+  // 点击发送按钮触发，更新时间并处理提交逻辑
+  submitForm: function () {
+    var TIME = this.data.TIME; // 获取页面中的 TIME 值
+    var prompt=this.data.prompt;
+    submitArtTask(url1, app_id, app_key, dataId, prompt, '', 1, styleConfig, 512, 512, -1, 7, 0.1, 0.5, 20, '', 'JPEG')
+    // 更新 items 数组中的时间信息
+    const newItem = { src: "../../image/img/情绪创作/book.png", time: TIME,src2:'' };
+    this.setData({
+      items: this.data.items.concat(newItem),
+      prompt: '', // 清空输入框内容
+    });
+   
+  },
+
+});
+
+
+const url1 = 'https://api-ai.vivo.com.cn/api/v1/task_submit';
+const url2 = 'https://api-ai.vivo.com.cn/api/v1/task_progress';
+const app_id = '3035858207';
+const app_key = 'CVHYGGCJxROxRQAY';
+const dataId = 'wxf0a0b22d358cf4c3'; // 替换为实际的请求唯一ID
+var prompt = ''; 
+const styleConfig = '55c682d5eeca50d4806fd1cba3628781'; // 替换为实际的风格模板ID
+const URI1 ='/api/v1/task_submit';
+const URI2='/api/v1/task_progress';
 
 const CryptoJS = require('crypto-js');
 
@@ -66,7 +119,7 @@ function generateCanonicalQueryString2(url) {
   return canonicalQueryString;
 }
 
-// 计算签名signature
+// 计算签名signature 提交作画
 function calculateSignature1(url, app_id, app_key, timestamp, nonce,URI) {
   // 构建signed_headers_string
   const signed_headers_string = `x-ai-gateway-app-id:${app_id}\n`
@@ -90,7 +143,7 @@ const base64Signature = CryptoJS.enc.Base64.stringify(hash);
   return signature;
 }
 
-// 计算签名signature
+// 计算签名signature 查询作画
 function calculateSignature2(url, app_id, app_key, timestamp, nonce,URI) {
   // 构建signed_headers_string
   const signed_headers_string = `x-ai-gateway-app-id:${app_id}\n`
@@ -165,7 +218,7 @@ function submitArtTask(url, app_id, app_key, dataId, prompt, initImages, imageTy
     });
 }
 
-// 查询作画任务状态的函数
+/// 查询作画任务状态的函数
 function queryTaskStatus(taskId) {
   // 构建完整的请求 URL
 var fullUrl = url2 + '?task_id=' + taskId;
@@ -175,7 +228,6 @@ var nonce = generateNonce();
 var timestamp = Math.floor(Date.now() / 1000);
 var signature = calculateSignature2(fullUrl, app_id, app_key, timestamp, nonce, URI2);
 
-// 发起请求
 wx.request({
   url: fullUrl,
   method: 'GET',
@@ -186,27 +238,26 @@ wx.request({
     'X-AI-GATEWAY-SIGNED-HEADERS': 'x-ai-gateway-app-id;x-ai-gateway-timestamp;x-ai-gateway-nonce',
     'X-AI-GATEWAY-SIGNATURE': signature,
   },
-  success: function(res) {
-    console.log('查询作画任务成功', res.data);
-    var result = res.data.result;
-  },
-  fail: function(error) {
-    console.error('查询作画任务失败', error);
-    // 处理请求失败的情况
-  }
-});
-
+    success: function(res) {
+      console.log('查询作画任务成功', res.data);
+      var result = res.data.result;
+      if (result.status !== 0) {
+        wx.showToast({
+          title: '正在作画中...', 
+          icon: 'loading', 
+          mask: true 
+        });
+      } else {
+        wx.hideToast();
+      }
+    },
+    fail: function(error) {
+      console.error('查询作画任务失败', error);
+      wx.hideToast(); 
+    }
+  });
 
     }
 
-const url1 = 'https://api-ai.vivo.com.cn/api/v1/task_submit';
-const url2 = 'https://api-ai.vivo.com.cn/api/v1/task_progress';
-const app_id = '3035858207';
-const app_key = 'CVHYGGCJxROxRQAY';
-const dataId = 'wxf0a0b22d358cf4c3'; // 替换为实际的请求唯一ID
-const prompt = '我好难过'; // 可选，图片描述
-const styleConfig = '55c682d5eeca50d4806fd1cba3628781'; // 替换为实际的风格模板ID
-const URI1 ='/api/v1/task_submit';
-const URI2='/api/v1/task_progress';
 
-submitArtTask(url1, app_id, app_key, dataId, prompt, '', 1, styleConfig, 512, 512, -1, 7, 0.1, 0.5, 20, '', 'JPEG')
+    
