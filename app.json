@@ -1,20 +1,20 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/art_or_music/art_or_music",
+    "pages/community/community",
+    "pages/AIchat/AIchat",
+    "pages/me/me",
     "pages/Mood/Mood",
     "pages/Diary/Diary",
     "pages/Diary_Overview/Diary_Overview",
     "pages/Mood_Calendar/Mood_Calendar",
     "pages/logs/logs",
     "pages/draw/draw",
-    "pages/art_or_music/art_or_music",
-    "pages/AIchat/AIchat",
-    "pages/me/me",
     "pages/login/login",
     "pages/comment/comment",
     "pages/myInf/myInf",
     "pages/chatPage/chatPage",
-    "pages/community/community",
     "pages/open/open"
  
   ],
