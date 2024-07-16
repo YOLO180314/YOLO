@@ -139,7 +139,7 @@ Page({
     });
   },
   loadItemsFromDatabase: function() {
-    collection.orderBy('time', 'desc').get({
+    collection.get({
       success: (res) => {
         console.log('数据库读取成功', res.data);
         if (res.data && res.data.length > 0) {
@@ -216,11 +216,11 @@ Page({
       },
       fail: (error) => {
         console.error('提交作画任务失败', error);
+        // 处理请求失败
       }
     });
   },
 
-  // 轮询查询任务状态
   queryTaskStatus: function(taskId) {
     const that = this; // 保存 Page 实例的引用
     const fullUrl = url2 + '?task_id=' + taskId;
