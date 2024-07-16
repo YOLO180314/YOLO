@@ -12,7 +12,7 @@
 <view class="mood">
   <image src="{{moodList[index].img}}" class="mood_img"/>
   <view class="mood_text">
-    <text>今天心情怎么样？</text>
+    <text>{{moodList[index].msg}}</text>
   </view>
 </view>
 
